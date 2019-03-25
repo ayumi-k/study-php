@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php:
+      build: ./docker/php7-apache
+      container_name: 'test-php7-apache'
+      ports:
+        - '8000:80'
+      volumes:
+        - ./html:/var/www/html
